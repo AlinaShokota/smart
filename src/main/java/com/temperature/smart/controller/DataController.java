@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/data")
-@CrossOrigin(origins = "*")
+//@RestController
+//@RequestMapping("/data")
+//@CrossOrigin(origins = "*")
 public class DataController {
 
-    @Autowired
-    private DataService dataService;
-
-    @GetMapping("/all")
-    public ResponseEntity<List<Data>> getAllData(){
-        return ResponseEntity.ok(dataService.getAllData());
-    }
+//    @Autowired
+//    private DataService dataService;
+//
+//    @GetMapping("/all")
+//    public ResponseEntity<List<Data>> getAllData(){
+//        return ResponseEntity.ok(dataService.getAllData());
+//    }
 
 //    @GetMapping("/latest")
 //    public ResponseEntity<Data> getLatestData(){
@@ -31,11 +31,11 @@ public class DataController {
 //        return ResponseEntity.ok(latestData);
 //    }
 
-    @GetMapping("/latest")
-    public ResponseEntity<Float> getLatestData(){
-        List<Data> allData = dataService.getAllData();
-        Data latestData = allData.get(allData.size() - 1);
-        return ResponseEntity.ok(latestData.getTValue());
-    }
+//    @GetMapping("/latest")
+//    public ResponseEntity<Float> getLatestData(){
+//        List<Data> allData = dataService.getAllData();
+//        Data latestData = allData.get(allData.size() - 1);
+//        return ResponseEntity.ok(latestData.getTValue());
+//    }
 
 }
